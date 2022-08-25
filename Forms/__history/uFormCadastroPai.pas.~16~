@@ -1,0 +1,38 @@
+unit uFormCadastroPai;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  uDmDados, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.Client, Data.DB,
+  FireDAC.Comp.DataSet, Data.FMTBcd, Datasnap.DBClient, SimpleDS, Data.SqlExpr;
+
+type
+    TFormCadastroPai = class(TForm)
+    PnCabecalho: TPanel;
+    BtnNovo: TBitBtn;
+    BtnGravar: TBitBtn;
+    BtnCancelar: TBitBtn;
+    BtnExcluir: TBitBtn;
+    BitSair: TBitBtn;
+    SQLConnection1: TSQLConnection;
+    SQLDataSet1: TSQLDataSet;
+    SQLQuery1: TSQLQuery;
+    SimpleDataSet1: TSimpleDataSet;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormCadastroPai: TFormCadastroPai;
+
+implementation
+
+{$R *.dfm}
+
+

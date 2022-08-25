@@ -1,0 +1,288 @@
+inherited FormCadastroPai1: TFormCadastroPai1
+  Caption = 'FormCadastroPai1'
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel [0]
+    Left = 8
+    Top = 48
+    Width = 11
+    Height = 13
+    Caption = 'ID'
+    FocusControl = DBEdit1
+  end
+  object Label2: TLabel [1]
+    Left = 8
+    Top = 71
+    Width = 75
+    Height = 13
+    Caption = 'RAZ'#195'O SOCIAL'
+    FocusControl = DBEdit2
+  end
+  object Label3: TLabel [2]
+    Left = 8
+    Top = 108
+    Width = 50
+    Height = 13
+    Caption = 'FANTASIA'
+    FocusControl = DBEdit3
+  end
+  object Label4: TLabel [3]
+    Left = 214
+    Top = 108
+    Width = 107
+    Height = 13
+    Caption = 'REGIME TRIBUT'#193'RIO'
+  end
+  object Label5: TLabel [4]
+    Left = 8
+    Top = 144
+    Width = 30
+    Height = 13
+    Caption = 'EMAIL'
+    FocusControl = DBEdit4
+  end
+  object Label6: TLabel [5]
+    Left = 8
+    Top = 181
+    Width = 22
+    Height = 13
+    Caption = 'SITE'
+    FocusControl = DBEdit5
+  end
+  object Label7: TLabel [6]
+    Left = 336
+    Top = 108
+    Width = 54
+    Height = 13
+    Caption = 'ENDERECO'
+    FocusControl = DBEdit6
+  end
+  object Label8: TLabel [7]
+    Left = 336
+    Top = 144
+    Width = 75
+    Height = 13
+    Caption = 'COMPLEMENTO'
+    FocusControl = DBEdit7
+  end
+  object Label9: TLabel [8]
+    Left = 552
+    Top = 108
+    Width = 43
+    Height = 13
+    Caption = 'NUMERO'
+    FocusControl = DBEdit8
+  end
+  object Label10: TLabel [9]
+    Left = 336
+    Top = 181
+    Width = 10
+    Height = 13
+    Caption = 'IE'
+    FocusControl = DBEdit9
+  end
+  object Label11: TLabel [10]
+    Left = 424
+    Top = 181
+    Width = 12
+    Height = 13
+    Caption = 'IM'
+    FocusControl = DBEdit10
+  end
+  object Label12: TLabel [11]
+    Left = 214
+    Top = 70
+    Width = 29
+    Height = 13
+    Caption = 'NOME'
+    FocusControl = DBEdit11
+  end
+  object DBEdit1: TDBEdit [13]
+    Left = 25
+    Top = 45
+    Width = 134
+    Height = 21
+    DataField = 'ID_CLIENTE'
+    DataSource = DsCadastro
+    TabOrder = 1
+  end
+  object DBEdit2: TDBEdit [14]
+    Left = 8
+    Top = 86
+    Width = 200
+    Height = 21
+    DataField = 'RAZAO_SOCIAL'
+    DataSource = DsCadastro
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit [15]
+    Left = 8
+    Top = 124
+    Width = 200
+    Height = 21
+    DataField = 'FANTASIA'
+    DataSource = DsCadastro
+    TabOrder = 3
+  end
+  object TDBComboBox [16]
+    Left = 214
+    Top = 124
+    Width = 107
+    Height = 21
+    DataField = 'TIPO_FJ'
+    DataSource = DsCadastro
+    Items.Strings = (
+      'FISICA'
+      'JURIDICA')
+    TabOrder = 4
+  end
+  object DBEdit4: TDBEdit [17]
+    Left = 8
+    Top = 160
+    Width = 313
+    Height = 21
+    DataField = 'EMAIL'
+    DataSource = DsCadastro
+    TabOrder = 5
+  end
+  object DBEdit5: TDBEdit [18]
+    Left = 8
+    Top = 197
+    Width = 313
+    Height = 21
+    DataField = 'SITE'
+    DataSource = DsCadastro
+    TabOrder = 6
+  end
+  object DBEdit6: TDBEdit [19]
+    Left = 336
+    Top = 124
+    Width = 200
+    Height = 21
+    DataField = 'ENDERECO'
+    DataSource = DsCadastro
+    TabOrder = 7
+  end
+  object DBEdit7: TDBEdit [20]
+    Left = 336
+    Top = 160
+    Width = 246
+    Height = 21
+    DataField = 'COMPLEMENTO'
+    DataSource = DsCadastro
+    TabOrder = 8
+  end
+  object DBEdit8: TDBEdit [21]
+    Left = 552
+    Top = 124
+    Width = 30
+    Height = 21
+    DataField = 'NUMERO'
+    DataSource = DsCadastro
+    TabOrder = 9
+  end
+  object DBEdit9: TDBEdit [22]
+    Left = 336
+    Top = 197
+    Width = 75
+    Height = 21
+    DataField = 'IE'
+    DataSource = DsCadastro
+    TabOrder = 10
+  end
+  object DBEdit10: TDBEdit [23]
+    Left = 424
+    Top = 197
+    Width = 75
+    Height = 21
+    DataField = 'IM'
+    DataSource = DsCadastro
+    TabOrder = 11
+  end
+  object DBEdit11: TDBEdit [24]
+    Left = 214
+    Top = 86
+    Width = 368
+    Height = 21
+    DataField = 'NOME'
+    DataSource = DsCadastro
+    TabOrder = 12
+  end
+  inherited FdQryCadastro: TFDQuery
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE')
+    object FdQryCadastroID_CLIENTE: TIntegerField
+      FieldName = 'ID_CLIENTE'
+      Origin = 'ID_CLIENTE'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FdQryCadastroRAZAO_SOCIAL: TWideStringField
+      FieldName = 'RAZAO_SOCIAL'
+      Origin = 'RAZAO_SOCIAL'
+      Size = 80
+    end
+    object FdQryCadastroFANTASIA: TWideStringField
+      FieldName = 'FANTASIA'
+      Origin = 'FANTASIA'
+      Size = 80
+    end
+    object FdQryCadastroCPF_CNPJ: TWideStringField
+      FieldName = 'CPF_CNPJ'
+      Origin = 'CPF_CNPJ'
+    end
+    object FdQryCadastroTIPO_FJ: TWideStringField
+      FieldName = 'TIPO_FJ'
+      Origin = 'TIPO_FJ'
+      Size = 1
+    end
+    object FdQryCadastroNOME: TWideStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 80
+    end
+    object FdQryCadastroEMAIL: TWideStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMAIL'
+      Size = 255
+    end
+    object FdQryCadastroSITE: TWideStringField
+      FieldName = 'SITE'
+      Origin = 'SITE'
+      Size = 255
+    end
+    object FdQryCadastroENDERECO: TWideStringField
+      FieldName = 'ENDERECO'
+      Origin = 'ENDERECO'
+      Size = 255
+    end
+    object FdQryCadastroCOMPLEMENTO: TWideStringField
+      FieldName = 'COMPLEMENTO'
+      Origin = 'COMPLEMENTO'
+      Size = 40
+    end
+    object FdQryCadastroNUMERO: TWideStringField
+      FieldName = 'NUMERO'
+      Origin = 'NUMERO'
+    end
+    object FdQryCadastroBAIRRO: TWideStringField
+      FieldName = 'BAIRRO'
+      Origin = 'BAIRRO'
+      Size = 50
+    end
+    object FdQryCadastroIE: TWideStringField
+      FieldName = 'IE'
+      Origin = 'IE'
+      Size = 30
+    end
+    object FdQryCadastroIM: TWideStringField
+      FieldName = 'IM'
+      Origin = 'IM'
+      Size = 30
+    end
+    object FdQryCadastroDT_EXCLUIDO: TDateField
+      FieldName = 'DT_EXCLUIDO'
+      Origin = 'DT_EXCLUIDO'
+    end
+  end
+end

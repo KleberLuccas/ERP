@@ -1,0 +1,173 @@
+object FormsCadastroPai: TFormsCadastroPai
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Clientes'
+  ClientHeight = 256
+  ClientWidth = 459
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  DesignSize = (
+    459
+    256)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object uFormsCadastroPai: TPanel
+    Left = -2
+    Top = 0
+    Width = 463
+    Height = 41
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 0
+    ExplicitWidth = 472
+    object BtnNovo: TBitBtn
+      Left = 8
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'Novo'
+      TabOrder = 0
+      OnClick = BtnNovoClick
+    end
+    object BtnGravar: TBitBtn
+      Left = 89
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'Gravar'
+      TabOrder = 1
+      OnClick = BtnGravarClick
+    end
+    object BtnCancelar: TBitBtn
+      Left = 170
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'Cancelar'
+      TabOrder = 2
+      OnClick = BtnCancelarClick
+    end
+    object BtnExcluir: TBitBtn
+      Left = 251
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'Excluir'
+      TabOrder = 3
+      OnClick = BtnExcluirClick
+    end
+    object BtnSair: TBitBtn
+      Left = 388
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'Sair'
+      TabOrder = 4
+      OnClick = BtnSairClick
+    end
+  end
+  object FdQryCadastro: TFDQuery
+    Connection = DmDados.FdCon
+    Transaction = FdTransaction
+    UpdateOptions.AssignedValues = [uvGeneratorName]
+    UpdateOptions.GeneratorName = 'GEN_CADASTRO_ID'
+    UpdateOptions.AutoIncFields = 'ID_CLIENTE'
+    UpdateObject = FDUpdCadastro
+    SQL.Strings = (
+      'SELECT * FROM CADASTRO')
+    Left = 424
+    Top = 53
+    object FdQryCadastroID_CLIENTE: TIntegerField
+      FieldName = 'ID_CLIENTE'
+      Origin = 'ID_CLIENTE'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FdQryCadastroRAZAO_SOCIAL: TWideStringField
+      FieldName = 'RAZAO_SOCIAL'
+      Origin = 'RAZAO_SOCIAL'
+      Size = 80
+    end
+    object FdQryCadastroFANTASIA: TWideStringField
+      FieldName = 'FANTASIA'
+      Origin = 'FANTASIA'
+      Size = 80
+    end
+    object FdQryCadastroCPF_CNPJ: TWideStringField
+      FieldName = 'CPF_CNPJ'
+      Origin = 'CPF_CNPJ'
+    end
+    object FdQryCadastroTIPO_FJ: TWideStringField
+      FieldName = 'TIPO_FJ'
+      Origin = 'TIPO_FJ'
+      Size = 1
+    end
+    object FdQryCadastroNOME: TWideStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 80
+    end
+    object FdQryCadastroEMAIL: TWideStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMAIL'
+      Size = 255
+    end
+    object FdQryCadastroSITE: TWideStringField
+      FieldName = 'SITE'
+      Origin = 'SITE'
+      Size = 255
+    end
+    object FdQryCadastroENDERECO: TWideStringField
+      FieldName = 'ENDERECO'
+      Origin = 'ENDERECO'
+      Size = 255
+    end
+    object FdQryCadastroCOMPLEMENTO: TWideStringField
+      FieldName = 'COMPLEMENTO'
+      Origin = 'COMPLEMENTO'
+      Size = 40
+    end
+    object FdQryCadastroNUMERO: TWideStringField
+      FieldName = 'NUMERO'
+      Origin = 'NUMERO'
+    end
+    object FdQryCadastroBAIRRO: TWideStringField
+      FieldName = 'BAIRRO'
+      Origin = 'BAIRRO'
+      Size = 50
+    end
+    object FdQryCadastroIE: TWideStringField
+      FieldName = 'IE'
+      Origin = 'IE'
+      Size = 30
+    end
+    object FdQryCadastroIM: TWideStringField
+      FieldName = 'IM'
+      Origin = 'IM'
+      Size = 30
+    end
+    object FdQryCadastroDT_EXCLUIDO: TDateField
+      FieldName = 'DT_EXCLUIDO'
+      Origin = 'DT_EXCLUIDO'
+    end
+  end
+  object FDUpdCadastro: TFDUpdateSQL
+    Connection = DmDados.FdCon
+    Left = 424
+    Top = 101
+  end
+  object FdTransaction: TFDTransaction
+    Connection = DmDados.FdCon
+    Left = 424
+    Top = 144
+  end
+  object DsCadastro: TDataSource
+    DataSet = FdQryCadastro
+    Left = 424
+    Top = 192
+  end
+end

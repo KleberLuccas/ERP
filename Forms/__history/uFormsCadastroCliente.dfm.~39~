@@ -1,0 +1,429 @@
+inherited FormsCadastroCliente: TFormsCadastroCliente
+  ClientHeight = 335
+  ClientWidth = 912
+  Position = poDesigned
+  WindowState = wsMaximized
+  OnShow = FormShow
+  ExplicitWidth = 928
+  ExplicitHeight = 374
+  DesignSize = (
+    912
+    335)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel [0]
+    Left = 28
+    Top = 48
+    Width = 11
+    Height = 13
+    Caption = 'ID'
+    FocusControl = DBEdit1
+  end
+  object Label2: TLabel [1]
+    Left = 234
+    Top = 128
+    Width = 75
+    Height = 13
+    Caption = 'RAZ'#195'O SOCIAL'
+    FocusControl = DBEdit2
+  end
+  object Label3: TLabel [2]
+    Left = 28
+    Top = 128
+    Width = 50
+    Height = 13
+    Caption = 'FANTASIA'
+    FocusControl = DBEdit3
+  end
+  object Label4: TLabel [3]
+    Left = 71
+    Top = 48
+    Width = 65
+    Height = 13
+    Caption = 'CPF OU CNPJ'
+    FocusControl = DBEdit4
+  end
+  object Label5: TLabel [4]
+    Left = 305
+    Top = 85
+    Width = 39
+    Height = 13
+    Caption = 'PESSOA'
+  end
+  object Label6: TLabel [5]
+    Left = 27
+    Top = 85
+    Width = 29
+    Height = 13
+    Caption = 'NOME'
+    FocusControl = DBEdit6
+  end
+  object Label7: TLabel [6]
+    Left = 28
+    Top = 168
+    Width = 34
+    Height = 13
+    Caption = 'E-MAIL'
+    FocusControl = DBEdit7
+  end
+  object Label8: TLabel [7]
+    Left = 28
+    Top = 208
+    Width = 22
+    Height = 13
+    Caption = 'SITE'
+    FocusControl = DBEdit8
+  end
+  object Label9: TLabel [8]
+    Left = 27
+    Top = 248
+    Width = 54
+    Height = 13
+    Caption = 'ENDERE'#199'O'
+    FocusControl = DBEdit9
+  end
+  object Label10: TLabel [9]
+    Left = 27
+    Top = 288
+    Width = 75
+    Height = 13
+    Caption = 'COMPLEMENTO'
+    FocusControl = DBEdit10
+  end
+  object Label11: TLabel [10]
+    Left = 294
+    Top = 248
+    Width = 43
+    Height = 13
+    Caption = 'NUMERO'
+    FocusControl = DBEdit11
+  end
+  object Label12: TLabel [11]
+    Left = 294
+    Top = 288
+    Width = 39
+    Height = 13
+    Caption = 'BAIRRO'
+    FocusControl = DBEdit12
+  end
+  object Label13: TLabel [12]
+    Left = 479
+    Top = 128
+    Width = 10
+    Height = 13
+    Caption = 'IE'
+    FocusControl = DBEdit13
+  end
+  object Label14: TLabel [13]
+    Left = 440
+    Top = 128
+    Width = 12
+    Height = 13
+    Caption = 'IM'
+    FocusControl = DBEdit14
+  end
+  object Label15: TLabel [14]
+    Left = 406
+    Top = 248
+    Width = 38
+    Height = 13
+    Caption = 'CIDADE'
+  end
+  object Label16: TLabel [15]
+    Left = 346
+    Top = 248
+    Width = 40
+    Height = 13
+    Caption = 'ESTADO'
+  end
+  inherited uFormsCadastroPai: TPanel
+    Width = 916
+    ExplicitWidth = 916
+    DesignSize = (
+      916
+      41)
+  end
+  object DBEdit1: TDBEdit [17]
+    Left = 28
+    Top = 64
+    Width = 37
+    Height = 21
+    DataField = 'ID_CLIENTE'
+    DataSource = DsCadastro
+    Enabled = False
+    TabOrder = 1
+  end
+  object DBEdit2: TDBEdit [18]
+    Left = 234
+    Top = 144
+    Width = 200
+    Height = 21
+    DataField = 'RAZAO_SOCIAL'
+    DataSource = DsCadastro
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit [19]
+    Left = 28
+    Top = 144
+    Width = 200
+    Height = 21
+    DataField = 'FANTASIA'
+    DataSource = DsCadastro
+    TabOrder = 3
+  end
+  object DBEdit4: TDBEdit [20]
+    Left = 71
+    Top = 64
+    Width = 157
+    Height = 21
+    DataField = 'CPF_CNPJ'
+    DataSource = DsCadastro
+    TabOrder = 4
+  end
+  object DBEdit6: TDBEdit [21]
+    Left = 27
+    Top = 101
+    Width = 264
+    Height = 21
+    DataField = 'NOME'
+    DataSource = DsCadastro
+    TabOrder = 5
+  end
+  object DBEdit7: TDBEdit [22]
+    Left = 28
+    Top = 184
+    Width = 484
+    Height = 21
+    DataField = 'EMAIL'
+    DataSource = DsCadastro
+    TabOrder = 6
+  end
+  object DBEdit8: TDBEdit [23]
+    Left = 27
+    Top = 224
+    Width = 485
+    Height = 21
+    DataField = 'SITE'
+    DataSource = DsCadastro
+    TabOrder = 7
+  end
+  object DBEdit9: TDBEdit [24]
+    Left = 27
+    Top = 264
+    Width = 257
+    Height = 21
+    DataField = 'ENDERECO'
+    DataSource = DsCadastro
+    TabOrder = 8
+  end
+  object DBEdit10: TDBEdit [25]
+    Left = 27
+    Top = 304
+    Width = 257
+    Height = 21
+    DataField = 'COMPLEMENTO'
+    DataSource = DsCadastro
+    TabOrder = 9
+  end
+  object DBEdit11: TDBEdit [26]
+    Left = 294
+    Top = 264
+    Width = 43
+    Height = 21
+    DataField = 'NUMERO'
+    DataSource = DsCadastro
+    TabOrder = 10
+  end
+  object DBEdit12: TDBEdit [27]
+    Left = 294
+    Top = 304
+    Width = 218
+    Height = 21
+    DataField = 'BAIRRO'
+    DataSource = DsCadastro
+    TabOrder = 11
+  end
+  object DBEdit13: TDBEdit [28]
+    Left = 479
+    Top = 144
+    Width = 33
+    Height = 21
+    DataField = 'IE'
+    DataSource = DsCadastro
+    TabOrder = 12
+  end
+  object DBEdit14: TDBEdit [29]
+    Left = 440
+    Top = 144
+    Width = 33
+    Height = 21
+    DataField = 'IM'
+    DataSource = DsCadastro
+    TabOrder = 13
+  end
+  object DBComboBox1: TDBComboBox [30]
+    Left = 305
+    Top = 101
+    Width = 81
+    Height = 21
+    Cursor = crHandPoint
+    DataField = 'TIPO_FJ'
+    DataSource = DsCadastro
+    Items.Strings = (
+      'FISICA'
+      'JURIDICA')
+    ReadOnly = True
+    TabOrder = 14
+    TabStop = False
+  end
+  object DBLookupComboBox1: TDBLookupComboBox [31]
+    Left = 346
+    Top = 264
+    Width = 49
+    Height = 21
+    DataField = 'ID_ESTADO'
+    DataSource = DsCadastro
+    KeyField = 'ID_ESTADO'
+    ListField = 'NOME'
+    ListSource = Lookup.DsEstados
+    TabOrder = 15
+  end
+  object DBLookupComboBox2: TDBLookupComboBox [32]
+    Left = 404
+    Top = 264
+    Width = 98
+    Height = 21
+    DataField = 'ID_ESTADO'
+    DataSource = DataSource1
+    KeyField = 'ID_CIDADE'
+    ListField = 'ID_CIDADE'
+    TabOrder = 16
+  end
+  object Button1: TButton [33]
+    Left = 664
+    Top = 123
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 17
+  end
+  inherited FdQryCadastro: TFDQuery
+    UpdateOptions.FetchGeneratorsPoint = gpImmediate
+    UpdateOptions.GeneratorName = 'GEN_CLIENTE_ID'
+    UpdateOptions.AutoIncFields = 'ID_CLIENTE'
+    Left = 576
+    Top = 45
+    object FdQryCadastroID_CLIENTE: TFDAutoIncField
+      FieldName = 'ID_CLIENTE'
+      Origin = 'ID_CLIENTE'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      IdentityInsert = True
+    end
+    object FdQryCadastroRAZAO_SOCIAL: TWideStringField
+      FieldName = 'RAZAO_SOCIAL'
+      Origin = 'RAZAO_SOCIAL'
+      Size = 80
+    end
+    object FdQryCadastroFANTASIA: TWideStringField
+      FieldName = 'FANTASIA'
+      Origin = 'FANTASIA'
+      Size = 80
+    end
+    object FdQryCadastroCPF_CNPJ: TWideStringField
+      FieldName = 'CPF_CNPJ'
+      Origin = 'CPF_CNPJ'
+    end
+    object FdQryCadastroTIPO_FJ: TWideStringField
+      FieldName = 'TIPO_FJ'
+      Origin = 'TIPO_FJ'
+      Size = 1
+    end
+    object FdQryCadastroNOME: TWideStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 80
+    end
+    object FdQryCadastroEMAIL: TWideStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMAIL'
+      Size = 255
+    end
+    object FdQryCadastroSITE: TWideStringField
+      FieldName = 'SITE'
+      Origin = 'SITE'
+      Size = 255
+    end
+    object FdQryCadastroENDERECO: TWideStringField
+      FieldName = 'ENDERECO'
+      Origin = 'ENDERECO'
+      Size = 255
+    end
+    object FdQryCadastroCOMPLEMENTO: TWideStringField
+      FieldName = 'COMPLEMENTO'
+      Origin = 'COMPLEMENTO'
+      Size = 40
+    end
+    object FdQryCadastroNUMERO: TWideStringField
+      FieldName = 'NUMERO'
+      Origin = 'NUMERO'
+    end
+    object FdQryCadastroBAIRRO: TWideStringField
+      FieldName = 'BAIRRO'
+      Origin = 'BAIRRO'
+      Size = 50
+    end
+    object FdQryCadastroIE: TWideStringField
+      FieldName = 'IE'
+      Origin = 'IE'
+      Size = 30
+    end
+    object FdQryCadastroIM: TWideStringField
+      FieldName = 'IM'
+      Origin = 'IM'
+      Size = 30
+    end
+    object FdQryCadastroDT_EXCLUIDO: TDateField
+      FieldName = 'DT_EXCLUIDO'
+      Origin = 'DT_EXCLUIDO'
+    end
+    object FdQryCadastroID_CIDADE: TIntegerField
+      FieldName = 'ID_CIDADE'
+      Origin = 'ID_CIDADE'
+    end
+    object FdQryCadastroID_ESTADO: TIntegerField
+      FieldName = 'ID_ESTADO'
+      Origin = 'ID_ESTADO'
+    end
+  end
+  inherited FDUpdCadastro: TFDUpdateSQL
+    Left = 576
+    Top = 93
+  end
+  inherited FdTransaction: TFDTransaction
+    Left = 576
+    Top = 136
+  end
+  inherited DsCadastro: TDataSource
+    Left = 576
+    Top = 184
+  end
+  object FDTransaction1: TFDTransaction
+    Connection = DmDados.FdCon
+    Left = 720
+    Top = 232
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQuery1
+    Left = 720
+    Top = 280
+  end
+  object FDQuery1: TFDQuery
+    Connection = DmDados.FdCon
+    Transaction = FDTransaction1
+    UpdateTransaction = FDTransaction1
+    SQL.Strings = (
+      'SELECT * from estado')
+    Left = 720
+    Top = 184
+  end
+end

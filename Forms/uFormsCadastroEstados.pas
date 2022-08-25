@@ -1,0 +1,37 @@
+unit uFormsCadastroEstados;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFormsCadastroPai, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Vcl.StdCtrls, Data.DB, FireDAC.Comp.Client, FireDAC.Comp.DataSet, Vcl.Buttons,
+  Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls, uLookup;
+
+type
+  TFormsCadastroEstado = class(TFormsCadastroPai)
+    FdQryCadastroID_ESTADO: TIntegerField;
+    FdQryCadastroSIGLA: TWideStringField;
+    FdQryCadastroNOME: TWideStringField;
+    Label1: TLabel;
+    e: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormsCadastroEstado: TFormsCadastroEstado;
+
+implementation
+
+{$R *.dfm}
+
+end.

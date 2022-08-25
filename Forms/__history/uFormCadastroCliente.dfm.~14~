@@ -1,0 +1,211 @@
+inherited FormCadastroCliente: TFormCadastroCliente
+  Caption = 'FormCadastroCliente'
+  ClientHeight = 324
+  ExplicitHeight = 353
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel [0]
+    Left = 20
+    Top = 52
+    Width = 11
+    Height = 13
+    Caption = 'ID'
+  end
+  object Label2: TLabel [1]
+    Left = 20
+    Top = 71
+    Width = 75
+    Height = 13
+    Caption = 'RAZ'#195'O SOCIAL'
+  end
+  object Label3: TLabel [2]
+    Left = 20
+    Top = 108
+    Width = 50
+    Height = 13
+    Caption = 'FANTASIA'
+  end
+  object Label4: TLabel [3]
+    Left = 226
+    Top = 108
+    Width = 103
+    Height = 13
+    Caption = 'REGIME TRIBUT'#193'RIO'
+  end
+  object Label5: TLabel [4]
+    Left = 25
+    Top = 144
+    Width = 30
+    Height = 13
+    Caption = 'EMAIL'
+  end
+  object Label6: TLabel [5]
+    Left = 20
+    Top = 181
+    Width = 22
+    Height = 13
+    Caption = 'SITE'
+  end
+  object Label7: TLabel [6]
+    Left = 348
+    Top = 108
+    Width = 54
+    Height = 13
+    Caption = 'ENDERECO'
+    FocusControl = DBEdit6
+  end
+  object Label8: TLabel [7]
+    Left = 348
+    Top = 144
+    Width = 75
+    Height = 13
+    Caption = 'COMPLEMENTO'
+    FocusControl = DBEdit7
+  end
+  object Label9: TLabel [8]
+    Left = 551
+    Top = 181
+    Width = 43
+    Height = 13
+    Caption = 'NUMERO'
+    FocusControl = DBEdit8
+  end
+  object Label10: TLabel [9]
+    Left = 348
+    Top = 181
+    Width = 10
+    Height = 13
+    Caption = 'IE'
+    FocusControl = DBEdit9
+  end
+  object Label11: TLabel [10]
+    Left = 452
+    Top = 181
+    Width = 12
+    Height = 13
+    Caption = 'IM'
+    FocusControl = DBEdit10
+  end
+  object Label12: TLabel [11]
+    Left = 226
+    Top = 70
+    Width = 29
+    Height = 13
+    Caption = 'NOME'
+    FocusControl = DBEdit11
+  end
+  object TDBEdit [13]
+    Left = 37
+    Top = 47
+    Width = 123
+    Height = 21
+    DataField = 'ID_CLIENTE'
+    DataSource = DsCadastro
+    TabOrder = 1
+  end
+  object TDBEdit [14]
+    Left = 20
+    Top = 86
+    Width = 189
+    Height = 21
+    DataField = 'RAZAO_SOCIAL'
+    DataSource = DsCadastro
+    TabOrder = 2
+  end
+  object TDBEdit [15]
+    Left = 20
+    Top = 124
+    Width = 189
+    Height = 21
+    DataField = 'FANTASIA'
+    DataSource = DsCadastro
+    TabOrder = 3
+  end
+  object TDBEdit [16]
+    Left = 20
+    Top = 160
+    Width = 307
+    Height = 21
+    DataField = 'EMAIL'
+    DataSource = DsCadastro
+    TabOrder = 4
+  end
+  object TDBEdit [17]
+    Left = 25
+    Top = 200
+    Width = 302
+    Height = 21
+    DataField = 'SITE'
+    DataSource = DsCadastro
+    TabOrder = 5
+  end
+  object DBEdit6: TDBEdit [18]
+    Left = 348
+    Top = 124
+    Width = 235
+    Height = 21
+    DataField = 'ENDERECO'
+    DataSource = DsCadastro
+    TabOrder = 6
+  end
+  object DBEdit7: TDBEdit [19]
+    Left = 348
+    Top = 160
+    Width = 235
+    Height = 21
+    DataField = 'COMPLEMENTO'
+    DataSource = DsCadastro
+    TabOrder = 7
+  end
+  object DBEdit8: TDBEdit [20]
+    Left = 551
+    Top = 197
+    Width = 32
+    Height = 21
+    DataField = 'NUMERO'
+    DataSource = DsCadastro
+    TabOrder = 8
+  end
+  object DBEdit9: TDBEdit [21]
+    Left = 348
+    Top = 197
+    Width = 64
+    Height = 21
+    DataField = 'IE'
+    DataSource = DsCadastro
+    TabOrder = 9
+  end
+  object DBEdit10: TDBEdit [22]
+    Left = 452
+    Top = 197
+    Width = 64
+    Height = 21
+    DataField = 'IM'
+    DataSource = DsCadastro
+    TabOrder = 10
+  end
+  object DBEdit11: TDBEdit [23]
+    Left = 226
+    Top = 86
+    Width = 357
+    Height = 21
+    DataField = 'NOME'
+    DataSource = DsCadastro
+    TabOrder = 11
+  end
+  object DBComboBox1: TDBComboBox [24]
+    Left = 226
+    Top = 124
+    Width = 101
+    Height = 21
+    TabOrder = 12
+  end
+  inherited FdQryCadastro: TFDQuery
+    UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
+    UpdateOptions.FetchGeneratorsPoint = gpImmediate
+    UpdateOptions.GeneratorName = 'GEN_CLIENTE_ID'
+    UpdateOptions.AutoIncFields = 'ID_CLIENTE'
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE')
+  end
+end

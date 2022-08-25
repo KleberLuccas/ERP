@@ -1,0 +1,99 @@
+object FormsCadastroPai: TFormsCadastroPai
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Clientes'
+  ClientHeight = 256
+  ClientWidth = 459
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  DesignSize = (
+    459
+    256)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object uFormsCadastroPai: TPanel
+    Left = -2
+    Top = 0
+    Width = 463
+    Height = 41
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 0
+    ExplicitWidth = 472
+    object BtnNovo: TBitBtn
+      Left = 8
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'Novo'
+      TabOrder = 0
+      OnClick = BtnNovoClick
+    end
+    object BtnGravar: TBitBtn
+      Left = 89
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'Gravar'
+      TabOrder = 1
+      OnClick = BtnGravarClick
+    end
+    object BtnCancelar: TBitBtn
+      Left = 170
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'Cancelar'
+      TabOrder = 2
+      OnClick = BtnCancelarClick
+    end
+    object BtnExcluir: TBitBtn
+      Left = 251
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'Excluir'
+      TabOrder = 3
+      OnClick = BtnExcluirClick
+    end
+    object BtnSair: TBitBtn
+      Left = 388
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'Sair'
+      TabOrder = 4
+      OnClick = BtnSairClick
+    end
+  end
+  object FdQryCadastro: TFDQuery
+    Connection = DmDados.FdCon
+    Transaction = FdTransaction
+    UpdateTransaction = FdTransaction
+    UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
+    UpdateObject = FDUpdCadastro
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE')
+    Left = 424
+    Top = 53
+  end
+  object FDUpdCadastro: TFDUpdateSQL
+    Connection = DmDados.FdCon
+    Left = 424
+    Top = 101
+  end
+  object FdTransaction: TFDTransaction
+    Connection = DmDados.FdCon
+    Left = 424
+    Top = 144
+  end
+  object DsCadastro: TDataSource
+    DataSet = FdQryCadastro
+    Left = 424
+    Top = 192
+  end
+end

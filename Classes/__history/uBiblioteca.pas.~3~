@@ -1,0 +1,13 @@
+unit uBiblioteca;
+
+interface
+uses IniFiles, System.SysUtils;
+  procedure setValorIni(pLocal, pSessao, pSubSessao : string; pValor  : string);
+
+implementation
+  procedure setValorIni(pLocal, pSessao, pSubSessao : string; pValor  : string);
+    var vArquivo : TIniFile;
+    begin
+      Varquivo := TIniFile.Create(ExtractFilePath());
+    end;
+end.

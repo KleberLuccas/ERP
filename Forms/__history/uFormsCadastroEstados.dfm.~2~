@@ -1,0 +1,42 @@
+inherited uFormsCadastroEstado: TuFormsCadastroEstado
+  Caption = 'uFormsCadastroEstado'
+  ClientHeight = 296
+  ClientWidth = 504
+  ExplicitWidth = 520
+  ExplicitHeight = 335
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited uFormsCadastroPai: TPanel
+    Width = 508
+    ExplicitWidth = 463
+  end
+  inherited FdQryCadastro: TFDQuery
+    UpdateObject = nil
+    SQL.Strings = ()
+    Left = 456
+    Top = 61
+    object FdQryCadastroID_ESTADO: TIntegerField
+      FieldName = 'ID_ESTADO'
+      Origin = 'ID_ESTADO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FdQryCadastroSIGLA: TWideStringField
+      FieldName = 'SIGLA'
+      Origin = 'SIGLA'
+      Size = 2
+    end
+  end
+  inherited FDUpdCadastro: TFDUpdateSQL
+    Left = 456
+    Top = 109
+  end
+  inherited FdTransaction: TFDTransaction
+    Left = 456
+    Top = 152
+  end
+  inherited DsCadastro: TDataSource
+    Left = 456
+    Top = 200
+  end
+end

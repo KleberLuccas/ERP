@@ -1,0 +1,77 @@
+inherited FormCadastroEstados: TFormCadastroEstados
+  Caption = 'FormCadastroEstados'
+  ClientHeight = 244
+  ClientWidth = 416
+  ExplicitWidth = 422
+  ExplicitHeight = 273
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel [0]
+    Left = 88
+    Top = 72
+    Width = 57
+    Height = 13
+    Caption = 'ID_ESTADO'
+    FocusControl = DBEdit1
+  end
+  object Label3: TLabel [1]
+    Left = 88
+    Top = 109
+    Width = 29
+    Height = 13
+    Caption = 'NOME'
+    FocusControl = DBEdit3
+  end
+  inherited PnCabecalho: TPanel
+    Width = 416
+    ExplicitWidth = 416
+    inherited BitSair: TBitBtn
+      Left = 325
+      Anchors = []
+      ExplicitLeft = 325
+    end
+  end
+  object DBEdit1: TDBEdit [3]
+    Left = 88
+    Top = 88
+    Width = 60
+    Height = 21
+    DataField = 'ID_ESTADO'
+    DataSource = DsCadastro
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit [4]
+    Left = 88
+    Top = 126
+    Width = 200
+    Height = 21
+    DataField = 'NOME'
+    DataSource = DsCadastro
+    TabOrder = 2
+  end
+  inherited FdQryCadastro: TFDQuery
+    SQL.Strings = (
+      'SELECT * FROM ESTADO')
+    Left = 379
+    object FdQryCadastroID_ESTADO: TIntegerField
+      FieldName = 'ID_ESTADO'
+      Origin = 'ID_ESTADO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FdQryCadastroNOME: TWideStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 60
+    end
+  end
+  inherited FdUpdCadastro: TFDUpdateSQL
+    Left = 379
+  end
+  inherited FdTransaction: TFDTransaction
+    Left = 379
+  end
+  inherited DsCadastro: TDataSource
+    Left = 376
+  end
+end

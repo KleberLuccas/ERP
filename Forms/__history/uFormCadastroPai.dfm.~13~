@@ -1,0 +1,88 @@
+object FormCadastroPai: TFormCadastroPai
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'FormCadastroPai'
+  ClientHeight = 486
+  ClientWidth = 757
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PnCabecalho: TPanel
+    Left = 0
+    Top = 0
+    Width = 757
+    Height = 41
+    Align = alTop
+    TabOrder = 0
+    object BtnNovo: TBitBtn
+      Left = 0
+      Top = 0
+      Width = 71
+      Height = 41
+      Caption = 'Novo'
+      TabOrder = 0
+    end
+    object BtnGravar: TBitBtn
+      Left = 77
+      Top = 0
+      Width = 71
+      Height = 41
+      Caption = 'Gravar'
+      TabOrder = 1
+    end
+    object BtnCancelar: TBitBtn
+      Left = 154
+      Top = 0
+      Width = 71
+      Height = 41
+      Caption = 'Cancelar'
+      TabOrder = 2
+    end
+    object BtnExcluir: TBitBtn
+      Left = 231
+      Top = 0
+      Width = 71
+      Height = 41
+      Caption = 'Excluir'
+      TabOrder = 3
+    end
+    object BitSair: TBitBtn
+      Left = 686
+      Top = 0
+      Width = 71
+      Height = 41
+      Caption = 'Sair'
+      TabOrder = 4
+    end
+  end
+  object SQLConnection1: TSQLConnection
+    Left = 688
+    Top = 72
+  end
+  object SQLDataSet1: TSQLDataSet
+    Params = <>
+    Left = 688
+    Top = 120
+  end
+  object SQLQuery1: TSQLQuery
+    Params = <>
+    Left = 688
+    Top = 168
+  end
+  object SimpleDataSet1: TSimpleDataSet
+    Aggregates = <>
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 688
+    Top = 224
+  end
+end
